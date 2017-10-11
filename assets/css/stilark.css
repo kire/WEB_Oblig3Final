@@ -22,26 +22,33 @@
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 80px auto 70px;
-	grid-template-areas: 	"header header header header"
+	grid-template-rows: auto 90px auto 70px;
+	grid-template-areas:	"header header header header"
+							"nav nav nav nav"
 							"maincontent maincontent maincontent sidebar"
 							"footer footer footer footer";
 }
 
 
+
 h1 {
-	background-color: #333;
+	
 	text-align: center;
 	color: white;
 	font-family: ubuntu;
 	max-width: 1400px;
 	margin: 0 auto;
-	padding: 10px 20px;
+	padding: 100px 20px;
+	width: 100%; 
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	background-image:url("../../imgs/header2.png");
+	grid-area: header;
+	font-size: 50px;
 }
 
 
 header#page-top {
-	grid-area: header;
+	grid-area: nav;
 	background-color: #333;
 	color: white;
 }
@@ -66,12 +73,8 @@ footer {
 	color: white;
 }
 
-/* Header */
-#page-top img {
-	float: left;
-	margin: 15px 10px;
-	max-width: 120px;
-}
+
+
 	nav {
 		
 		float: left;
@@ -87,9 +90,10 @@ footer {
 				nav ul li a {
 					display: block;
 					color: white;
+					font-size: 20px;
 					
 					text-decoration: none;
-					padding: 10px 20px;
+					padding: 20px 20px;
 				}
 				nav ul li a:hover {
 					background: grey;
@@ -102,6 +106,7 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
 	
 }
 
@@ -111,6 +116,7 @@ article {
 	overflow: hidden;
 	border: 1px solid #ccc;
 	margin-bottom: 2%;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
 }
 	article img {
@@ -134,13 +140,14 @@ article {
 		}
 
 
-#sidebarknapp {
+p a {
 	background-color: #333;
 	color: white;
 	padding: 10px 20px;
 	float: left;
 	margin: 10px;
-	text-decoration: none !important;
+
+	
 }
 
 /* Footer */
@@ -165,8 +172,9 @@ footer {
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 80px auto auto 70px;
+	grid-template-rows: 250px auto auto auto 70px;
 	grid-template-areas: 	"header header"
+							"nav nav"
 							"maincontent maincontent"
 							"sidebar sidebar"
 							"footer footer";
@@ -180,8 +188,9 @@ footer {
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 80px auto auto 70px;
+	grid-template-rows: auto 80px auto auto 70px;
 	grid-template-areas: 	"header"
+							"nav"
 							"maincontent"
 							"sidebar"
 							"footer";
