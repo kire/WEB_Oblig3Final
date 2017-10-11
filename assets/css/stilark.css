@@ -22,7 +22,7 @@
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: auto 90px auto 70px;
+	grid-template-rows: 200px 90px auto 70px;
 	grid-template-areas:	"header header header header"
 							"nav nav nav nav"
 							"maincontent maincontent maincontent sidebar"
@@ -73,7 +73,19 @@ footer {
 	color: white;
 }
 
+#artikkel {
+	display: block;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	margin-bottom: 2%;
+	padding: 20px;
 
+}
+
+#artikkel img {
+	float: right;
+	size: 50%;
+}
 
 	nav {
 		
